@@ -18,4 +18,6 @@ import {DUMMY_USERS} from "./dummy-users";
 export class AppComponent {
 
   protected readonly users = DUMMY_USERS;
+  onSelectedUser(id : string){
+  }
 }
