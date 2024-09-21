@@ -18,8 +18,8 @@ import {TasksComponent} from "./tasks/tasks.component";
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  selectedUsername?: string;
-  selectedUserId?: string;
+  selectedUsername!: string;
+  selectedUserId!: string;
   protected readonly users = DUMMY_USERS;
 
   onSelectedUser(id: string) {

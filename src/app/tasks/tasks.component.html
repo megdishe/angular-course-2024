@@ -1,15 +1,19 @@
+@if (editMode) {
+  <app-create-task (close)="quitEditMode()" [userId]="userId()"/>
+}
 <section id="tasks">
   <header>
     <h2>{{ username() }}'s tasks</h2>
     <menu>
-      <button>Add Task</button>
+      <button (click)="onAddTask()">Add Task</button>
     </menu>
   </header>
- <ul>
-   @for (task of selectedUserTasks; track task.id){
-     <li>
-       <app-task [task] = task (completed)="onTaskCompleted($event)"></app-task>
-     </li>
-   }
- </ul>
+  <ul>
+    @for (task of selectedUserTasks; track task.id) {
+      <li>
+        <app-task [task]=task></app-task>
+      </li>
+    }
+  </ul>
 </section>
+
